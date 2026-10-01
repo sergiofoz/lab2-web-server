@@ -25,9 +25,10 @@ kotlin {
     }
 }
 
-val mockitoAgent = configurations.create("mockitoAgent") {
-    isCanBeConsumed = false
-}
+val mockitoAgent =
+    configurations.create("mockitoAgent") {
+        isCanBeConsumed = false
+    }
 
 dependencies {
     val springBootVersion = libs.versions.springBoot.get()
