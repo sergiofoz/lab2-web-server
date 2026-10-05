@@ -39,6 +39,7 @@ dependencies {
     implementation(libs.spring.boot.starter.webmvc)
     implementation(libs.spring.boot.starter.thymeleaf)
     implementation(libs.jackson.module.kotlin)
+    implementation(libs.bucket4j.core)
     runtimeOnly(libs.kotlin.reflect)
 
     testImplementation(libs.spring.boot.starter.test)
