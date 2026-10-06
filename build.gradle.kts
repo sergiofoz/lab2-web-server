@@ -39,6 +39,9 @@ dependencies {
     implementation(libs.spring.boot.starter.webmvc)
     implementation(libs.spring.boot.starter.thymeleaf)
     implementation(libs.jackson.module.kotlin)
+    implementation(libs.spring.cloud.gateway.server.webmvc)
+    implementation(libs.bucket4j.caffeine)
+    implementation(libs.caffeine)
     runtimeOnly(libs.kotlin.reflect)
 
     testImplementation(libs.spring.boot.starter.test)

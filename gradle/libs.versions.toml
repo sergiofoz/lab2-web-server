@@ -2,6 +2,8 @@
 kotlin = "2.4.0"
 springBoot = "4.1.0"
 ktlint = "14.2.0"
+bucket4j = "8.10.1"
+springCloudGateway = "5.0.3"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -18,3 +20,6 @@ spring-boot-starter-thymeleaf = { module = "org.springframework.boot:spring-boot
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
 jackson-module-kotlin = { module = "tools.jackson.module:jackson-module-kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+bucket4j-caffeine = { module = "com.bucket4j:bucket4j-caffeine", version.ref = "bucket4j" }
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine" }
+spring-cloud-gateway-server-webmvc = { module = "org.springframework.cloud:spring-cloud-gateway-server-webmvc", version.ref = "springCloudGateway" }
