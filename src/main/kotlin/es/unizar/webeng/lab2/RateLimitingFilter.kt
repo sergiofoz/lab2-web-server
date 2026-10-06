@@ -35,8 +35,15 @@ class RateLimitingFilter : OncePerRequestFilter() {
 
     /**
      * Excludes all other routes so the rate limit affects only `/time`.
+     *
+     * We compare against the path from the HTTP request (not only servletPath)
+     * because MockMvc and servlet containers can expose the resource path in
+     * slightly different ways during tests and runtime.
      */
-    override fun shouldNotFilter(request: HttpServletRequest): Boolean = request.servletPath != TIME_PATH
+    override fun shouldNotFilter(request: HttpServletRequest): Boolean {
+        val path = request.requestURI.removePrefix(request.contextPath)
+        return path != TIME_PATH
+    }
 
     /**
      * Charges one token to the bucket for the remote IP, then either continues
